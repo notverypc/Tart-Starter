@@ -2,7 +2,7 @@
 # list_vms.sh
 # Outputs Alfred Script Filter JSON listing all Tart VMs with their running status.
 
-set -euo pipefail
+set -uo pipefail
 
 TART_BIN="/opt/homebrew/bin/tart"
 
