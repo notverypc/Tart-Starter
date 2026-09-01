@@ -7,6 +7,9 @@ set -uo pipefail
 # Ensure we have a valid working directory (Alfred on some machines may not set one)
 cd /tmp
 
+# Load user profile to pick up environment variables such as TART_HOME
+[[ -f "$HOME/.zprofile" ]] && source "$HOME/.zprofile"
+
 TART_BIN="/opt/homebrew/bin/tart"
 
 if [[ ! -x "$TART_BIN" ]]; then
