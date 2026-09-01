@@ -7,7 +7,7 @@ set -euo pipefail
 TART_BIN="/opt/homebrew/bin/tart"
 
 if [[ ! -x "$TART_BIN" ]]; then
-  echo '{"items":[{"title":"tart not found","subtitle":"Install tart via Homebrew: brew install cirruslabs/cli/tart","valid":false}]}'
+  echo '{"items":[{"title":"tart not found","subtitle":"Install tart via Homebrew: brew install openai/tap/tart","valid":false}]}'
   exit 0
 fi
 
