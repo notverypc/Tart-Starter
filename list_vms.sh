@@ -19,11 +19,12 @@ items=""
 first=true
 
 while IFS= read -r line; do
-  # Skip the header line
-  [[ "$line" =~ ^Name ]] && continue
+  # Skip the header line (starts with "Source") and blank lines
+  [[ "$line" =~ ^Source ]] && continue
   [[ -z "$line" ]] && continue
 
-  name=$(echo "$line" | awk '{print $1}')
+  # tart list columns: Source  Name  Disk  Size  Accessed  State
+  name=$(echo "$line" | awk '{print $2}')
   state=$(echo "$line" | awk '{print $NF}')
 
   if [[ "$state" == "running" ]]; then
