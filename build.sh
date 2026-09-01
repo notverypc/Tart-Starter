@@ -8,7 +8,7 @@ set -euo pipefail
 WORKFLOW_NAME="Tart-Starter"
 OUTPUT_FILE="${WORKFLOW_NAME}.alfredworkflow"
 SCRIPT_FILES=("list_vms.sh" "start_vm.sh" "stop_vm.sh")
-REQUIRED_FILES=("info.plist" "${SCRIPT_FILES[@]}")
+REQUIRED_FILES=("info.plist" "icon.png" "${SCRIPT_FILES[@]}")
 
 ALFRED_WORKFLOW_DIR="/Users/uk46088528/Library/CloudStorage/OneDrive-Personal/_SyncFolder/Apps/Alfred v2/Alfred.alfredpreferences/workflows/user.workflow.B22BF09B-1460-471C-9F3A-EC9F2619182B"
 
@@ -24,7 +24,7 @@ done
 # Copy scripts into the live Alfred workflow folder
 if [[ -d "$ALFRED_WORKFLOW_DIR" ]]; then
   echo "Copying scripts to Alfred workflow folder…"
-  cp "${SCRIPT_FILES[@]}" "$ALFRED_WORKFLOW_DIR/"
+  cp "${SCRIPT_FILES[@]}" icon.png "$ALFRED_WORKFLOW_DIR/"
   chmod +x "${SCRIPT_FILES[@]/#/$ALFRED_WORKFLOW_DIR/}"
   echo "Done."
 else

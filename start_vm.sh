@@ -20,6 +20,6 @@ if [[ "$state" == "running" ]]; then
   exit 0
 fi
 
-"$TART_BIN" start "$VM_NAME"
+"$TART_BIN" run "$VM_NAME" > /dev/null 2>&1 &
 
 echo "Starting $VM_NAME…"

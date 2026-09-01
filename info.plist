@@ -4,8 +4,6 @@
 <dict>
 	<key>bundleid</key>
 	<string>com.notverypc.tart-starter</string>
-	<key>category</key>
-	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
 		<key>E0A05189-D8B6-427A-B6F6-C462DC7E8368</key>
@@ -50,7 +48,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>bash "/Users/uk46088528/Library/CloudStorage/OneDrive-Personal/_SyncFolder/Apps/Alfred v2/Alfred.alfredpreferences/workflows/user.workflow.B22BF09B-1460-471C-9F3A-EC9F2619182B/start_vm.sh"</string>
+				<string>cd "$alfred_workflow_dir" &amp;&amp; bash start_vm.sh</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -93,7 +91,7 @@
 				<key>runningsubtext</key>
 				<string>Getting List of VMs</string>
 				<key>script</key>
-				<string>bash "/Users/uk46088528/Library/CloudStorage/OneDrive-Personal/_SyncFolder/Apps/Alfred v2/Alfred.alfredpreferences/workflows/user.workflow.B22BF09B-1460-471C-9F3A-EC9F2619182B/list_vms.sh"</string>
+				<string>cd "$alfred_workflow_dir" &amp;&amp; bash list_vms.sh</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -122,7 +120,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>bash "/Users/uk46088528/Library/CloudStorage/OneDrive-Personal/_SyncFolder/Apps/Alfred v2/Alfred.alfredpreferences/workflows/user.workflow.B22BF09B-1460-471C-9F3A-EC9F2619182B/stop_vm.sh"</string>
+				<string>cd "$alfred_workflow_dir" &amp;&amp; bash stop_vm.sh</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -169,7 +167,7 @@
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>0.0.1</string>
+	<string>0.0.2</string>
 	<key>webaddress</key>
 	<string>https://github.com/notverypc/Tart-Starter</string>
 </dict>
