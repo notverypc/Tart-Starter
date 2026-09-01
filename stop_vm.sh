@@ -13,7 +13,7 @@ if [[ ! -x "$TART_BIN" ]]; then
 fi
 
 # Check the VM is actually running before trying to stop it
-state=$("$TART_BIN" list 2>/dev/null | awk -v vm="$VM_NAME" '$1 == vm {print $NF}')
+state=$("$TART_BIN" list 2>/dev/null | awk -v vm="$VM_NAME" '$2 == vm {print $NF}')
 
 if [[ "$state" != "running" ]]; then
   echo "$VM_NAME is not running."

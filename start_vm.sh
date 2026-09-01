@@ -13,14 +13,13 @@ if [[ ! -x "$TART_BIN" ]]; then
 fi
 
 # Check the VM is not already running
-state=$("$TART_BIN" list 2>/dev/null | awk -v vm="$VM_NAME" '$1 == vm {print $NF}')
+state=$("$TART_BIN" list 2>/dev/null | awk -v vm="$VM_NAME" '$2 == vm {print $NF}')
 
 if [[ "$state" == "running" ]]; then
   echo "$VM_NAME is already running."
   exit 0
 fi
 
-# Run in background so Alfred does not hang
-"$TART_BIN" run "$VM_NAME" &
+"$TART_BIN" start "$VM_NAME"
 
 echo "Starting $VM_NAME…"
