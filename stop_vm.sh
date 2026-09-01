@@ -4,6 +4,9 @@
 
 set -euo pipefail
 
+cd /tmp
+[[ -f "$HOME/.zprofile" ]] && source "$HOME/.zprofile"
+
 TART_BIN="/opt/homebrew/bin/tart"
 VM_NAME="${vm_name:?vm_name variable is not set}"
 
