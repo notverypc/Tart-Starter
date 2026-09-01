@@ -4,6 +4,9 @@
 
 set -uo pipefail
 
+# Ensure we have a valid working directory (Alfred on some machines may not set one)
+cd /tmp
+
 TART_BIN="/opt/homebrew/bin/tart"
 
 if [[ ! -x "$TART_BIN" ]]; then
