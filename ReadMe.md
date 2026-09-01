@@ -32,22 +32,6 @@ export TART_HOME="/Volumes/YourDisk"
 
 The workflow sources `~/.zprofile` automatically so Alfred will pick it up.
 
-## Building
-
-If you want to build the workflow from source:
-
-1. Make the build script executable:
-   ```bash
-   chmod +x build.sh
-   ```
-2. Export `info.plist` from Alfred (right-click the workflow → Export, then unzip to extract `info.plist`) and place it in this folder
-3. Run:
-   ```bash
-   ./build.sh
-   ```
-
-This will copy the scripts into the live Alfred workflow folder and package everything into `Tart-Starter.alfredworkflow`.
-
 ## Files
 
 | File | Description |
